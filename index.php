@@ -14,7 +14,6 @@
             $this->anno = $_anno;
             $this->genere = $_genere;
         }
-       
         // dichiarazione e definizione dei metodi
         public function setTitolo($_titolo){
             $this->titolo = $_titolo;
@@ -42,18 +41,20 @@
         }
     }
    
-    $ilGladiatore = new Movie('il gladiatore', '230', '2000', 'azione');
-    echo $ilGladiatore->getTitolo();
-    echo $ilGladiatore->getDurata();
-   
-    // $ilGladiatore = new Movie('Il Gladiatore', 235, 2000, 'Azione');
-    // echo 'TITOLO:' . ' ' . $ilGladiatore->titolo . '<br>';
-    // echo 'DURATA:' . ' ' .$ilGladiatore->durata . '<br>';
-    // echo 'ANNO:' . ' ' .$ilGladiatore->anno . '<br>';
-    // echo 'GENERE:' . ' ' .$ilGladiatore->genere . '<br><br><br>';
-    // $toloTolo = new Movie('Tolo Tolo', 130, 2020, 'Comico');
-    // echo 'TITOLO:' . ' ' . $toloTolo->titolo . '<br>';
-    // echo 'DURATA:' . ' ' .$toloTolo->durata . '<br>';
-    // echo 'ANNO:' . ' ' .$toloTolo->anno . '<br>';
-    // echo 'GENERE:' . ' ' .$toloTolo->genere . '<br>';
+    $ilGladiatore = new Movie('Il Gladiatore', '230', '2000', 'azione');
+    echo 'TITOLO:' . ' ' . $ilGladiatore->getTitolo() . '<br>';
+    echo 'DURATA:' . ' ' . $ilGladiatore->getDurata(). ' ' . 'minuti' . '<br>';
+    echo 'ANNO:' . ' ' . $ilGladiatore->getAnno() . '<br>';
+    echo 'GENERE:' . ' ' .$ilGladiatore->getGenere() . '<br><br>';
+    $toloTolo = new Movie('Tolo Tolo', '130', '2006', 'comico');
+    echo 'TITOLO:' . ' ' . $toloTolo->getTitolo() . '<br>';
+    echo 'DURATA:' . ' ' . $toloTolo->getDurata(). ' ' . 'minuti' . '<br>';
+    echo 'ANNO:' . ' ' . $toloTolo->getAnno() . '<br>';
+    echo 'GENERE:' . ' ' .$toloTolo->getGenere() . '<br><br>';
+    $freddyVsJason = new Movie('Freddy vs Jason', '138', '2003', 'horror');
+    echo 'TITOLO:' . ' ' . $freddyVsJason->getTitolo() . '<br>';
+    echo 'DURATA:' . ' ' . $freddyVsJason->getDurata(). ' ' . 'minuti' . '<br>';
+    echo 'ANNO:' . ' ' . $freddyVsJason->getAnno() . '<br>';
+    echo 'GENERE:' . ' ' .$freddyVsJason->getGenere() . '<br><br>';
+
 ?>
