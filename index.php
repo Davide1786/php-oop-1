@@ -1,22 +1,12 @@
-<!-- Oggi pomeriggio ripassate i primi concetti di classe e di variabili e
-metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
-- è definita una classe ‘Movie’
-   => all'interno della classe sono dichiarate delle variabili d'istanza
-   => all'interno della classe è definito un costruttore
-   => all'interno della classe è definito almeno un metodo
-- vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
-Come detto a lezione, iniziate a dare un'occhiata alle slides legate all'ereditarierà, polimorfismo & co.
-Resto a vostra disposizione per domande e dubbi attraverso i tickets :sorriso:
-Buon lavoro! -->
-
-<?php 
-
+<?php
+    // dichiarazione della classe
     class Movie {
+        // dichiarazione delle proprietà
         public $titolo;
         public $durata;
         public $anno;
         public $genere;
-   
+        // dichiarazione costruttore
         function __construct($_titolo, $_durata, $_anno, $_genere)
         {
             $this->titolo = $_titolo;
@@ -24,7 +14,8 @@ Buon lavoro! -->
             $this->anno = $_anno;
             $this->genere = $_genere;
         }
-
+       
+        // dichiarazione e definizione dei metodi
         public function setTitolo($_titolo){
             $this->titolo = $_titolo;
         }
@@ -48,25 +39,21 @@ Buon lavoro! -->
         }
         public function getGenere(){
             return $this->genere;
-        } 
+        }
     }
-
-    $ilGladiatore = new Movie('Il Gladiatore', 235, 2000, 'Azione');
-    echo 'TITOLO:' . ' ' . $ilGladiatore->titolo . '<br>';
-    echo 'DURATA:' . ' ' .$ilGladiatore->durata . '<br>';
-    echo 'ANNO:' . ' ' .$ilGladiatore->anno . '<br>';
-    echo 'GENERE:' . ' ' .$ilGladiatore->genere . '<br><br><br>';
-    $toloTolo = new Movie('Tolo Tolo', 130, 2020, 'Comico');
-    echo 'TITOLO:' . ' ' . $toloTolo->titolo . '<br>';
-    echo 'DURATA:' . ' ' .$toloTolo->durata . '<br>';
-    echo 'ANNO:' . ' ' .$toloTolo->anno . '<br>';
-    echo 'GENERE:' . ' ' .$toloTolo->genere . '<br>';
-
-
-
-
-
-
-
-
+   
+    $ilGladiatore = new Movie('il gladiatore', '230', '2000', 'azione');
+    echo $ilGladiatore->getTitolo();
+    echo $ilGladiatore->getDurata();
+   
+    // $ilGladiatore = new Movie('Il Gladiatore', 235, 2000, 'Azione');
+    // echo 'TITOLO:' . ' ' . $ilGladiatore->titolo . '<br>';
+    // echo 'DURATA:' . ' ' .$ilGladiatore->durata . '<br>';
+    // echo 'ANNO:' . ' ' .$ilGladiatore->anno . '<br>';
+    // echo 'GENERE:' . ' ' .$ilGladiatore->genere . '<br><br><br>';
+    // $toloTolo = new Movie('Tolo Tolo', 130, 2020, 'Comico');
+    // echo 'TITOLO:' . ' ' . $toloTolo->titolo . '<br>';
+    // echo 'DURATA:' . ' ' .$toloTolo->durata . '<br>';
+    // echo 'ANNO:' . ' ' .$toloTolo->anno . '<br>';
+    // echo 'GENERE:' . ' ' .$toloTolo->genere . '<br>';
 ?>
