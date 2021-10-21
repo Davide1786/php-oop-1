@@ -16,29 +16,51 @@ Buon lavoro! -->
         public $durata;
         public $anno;
         public $genere;
-        public $lingua;
-     
-         
-        function __construct($_titolo, $_durata, $_anno, $_genere, $_lingua)
+   
+        function __construct($_titolo, $_durata, $_anno, $_genere)
         {
             $this->titolo = $_titolo;
             $this->durata = $_durata;
             $this->anno = $_anno;
             $this->genere = $_genere;
-            $this->lingua = $_lingua;
         }
 
-        function addType($_genere) {
-           return $this->genere;
+        public function setTitolo($_titolo){
+            $this->titolo = $_titolo;
         }
+        public function setDurata($_durata){
+            $this->durata = $_durata;
+        }
+        public function setAnno($_anno){
+            $this->anno = $_anno;
+        }
+        public function setGenere($_genere){
+            $this->genere = $_genere;
+        }
+        public function getTitolo(){
+            return $this->titolo;
+        }
+        public function getDurata(){
+            return $this->durata;
+        }
+        public function getAnno(){
+            return $this->anno;
+        }
+        public function getGenere(){
+            return $this->genere;
+        } 
     }
 
-    $movieOne = new Movie('Il Gladiatore', 235, 2000, 'Azione', 'ita');
-    $movieTwo = new Movie('Il Cantante', 135, 2006, 'Musica', 'fra');
-
-    var_dump($movieOne);
-    var_dump($movieTwo);
-    echo $movieTwo->addType($_genere);
+    $ilGladiatore = new Movie('Il Gladiatore', 235, 2000, 'Azione');
+    echo 'TITOLO:' . ' ' . $ilGladiatore->titolo . '<br>';
+    echo 'DURATA:' . ' ' .$ilGladiatore->durata . '<br>';
+    echo 'ANNO:' . ' ' .$ilGladiatore->anno . '<br>';
+    echo 'GENERE:' . ' ' .$ilGladiatore->genere . '<br><br><br>';
+    $toloTolo = new Movie('Tolo Tolo', 130, 2020, 'Comico');
+    echo 'TITOLO:' . ' ' . $toloTolo->titolo . '<br>';
+    echo 'DURATA:' . ' ' .$toloTolo->durata . '<br>';
+    echo 'ANNO:' . ' ' .$toloTolo->anno . '<br>';
+    echo 'GENERE:' . ' ' .$toloTolo->genere . '<br>';
 
 
 
